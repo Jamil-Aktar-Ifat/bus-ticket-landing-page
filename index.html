@@ -14,33 +14,124 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- custom css  -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="font-raleway">
-    <header class="container mx-auto mt-10">
+  <body class="font-raleway mx-auto container">
+    <header class="container mt-10">
       <!-- nav section  -->
-      <section class="flex justify-between">
-        <h1 class="text-3xl font-bold">National Express</h1>
-        <div class="inline-flex gap-16">
-          <button>Home</button>
-          <button>About</button>
-          <button>Destinations</button>
-          <button>Search</button>
-        </div>
-        <div>
-          <button class="flex gap-3 btn text-[#1DD100] bg-[#1DD1001A]">Bus <img src="./images/bus-icon.png" alt=""></button>
+      <section>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li>
+                  <details>
+                    <summary>Destinations</summary>
+                    <ul class="p-2">
+                      <li><a>Oxford</a></li>
+                      <li><a>Leeds</a></li>
+                    </ul>
+                  </details>
+                  <li><a>Search</a></li>
+                </li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl">National Express</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[18px]">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li>
+                <details>
+                  <summary>Destinations</summary>
+                  <ul class="p-2">
+                    <li><a>Oxford</a></li>
+                    <li><a>Leeds</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn bg-[#1dd1001a] text-[#1dd100] text-[18px]"
+              >Bus <img src="./images/bus-icon.png" alt=""
+            /></a>
+          </div>
         </div>
       </section>
     </header>
-
     <main>
       <!-- End to End Travel section  -->
-      <section></section>
+      <section>
+        <div class="hero rounded-3xl" style="background-image: url('./images/banner.png');">
+         <div class="hero-content items-center text-center text-neutral-content">
+          <div class="max-w-md flex-col my-28">
+            <h1 class="mb-5 text-5xl font-bold">City-to-City Travel with  <br><span class="text-5xl font-bold text-[#1DD100]">National Express</span></h1>
+            <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            <button class="btn bg-[#1dd100] border-none text-lg font-bold">Buy Tickets</button>
+          </div>
+         </div>
+       </div>
+      <!-- cards section  -->
+       <div class="flex justify-center gap-7 font-inter">
+        <div class="card w-3/12 bg-base-100 shadow-xl -top-16 border-b-4 border-lime-500">
+          <div class="flex gap-4 m-6 pl-6">
+            <img  src="./images/people.png" alt="">
+            <div class="">
+              <h2 class="card-title text-4xl font-bold">500K+</h2>
+              <p class="text-xl">Registeres users</p>
+            </div>
+          </div>
+         </div>
+        <div class="card w-3/12 bg-base-100 shadow-xl -top-16 border-b-4 border-lime-500">
+          <div class="flex gap-4 m-6 pl-6">
+            <img  src="./images/ticket-cupon.png" alt="">
+            <div class="">
+              <h2 class="card-title text-4xl font-bold">1.7 lacks</h2>
+              <p class="text-xl">Tickets sold</p>
+            </div>
+          </div>
+         </div>
+         <div class="card w-3/12 bg-base-100 shadow-xl -top-16 border-b-4 border-lime-500">
+          <div class="flex gap-4 m-6 pl-6">
+            <img  src="./images/stoppage.png" alt="">
+            <div class="">
+              <h2 class="card-title text-4xl font-bold">80K+</h2>
+              <p class="text-xl">Rental partners</p>
+            </div>
+          </div>
+         </div>
+        </div>
+      </section>
       <!-- Best offer for you section  -->
       <section></section>
     </main>
 
     <!-- footer section  -->
-    <footer></footer>
+    <footer>
+    </footer>
   </body>
 </html>
