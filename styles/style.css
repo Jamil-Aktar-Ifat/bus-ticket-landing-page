@@ -10,6 +10,13 @@
   font-family: "Raleway", sans-serif;
 }
 
-.primary-color{
-    color: #1DD100 ;
+.primary-color {
+  color: #1dd100;
 }
+
+.dotted-divider {
+  border-bottom: 2px dotted black;
+  width: 100%;
+  margin: 20px 0;
+}
+
