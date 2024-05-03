@@ -436,7 +436,21 @@
             <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
             <p class="font-medium my-2">Email*</p>
             <input type="text" placeholder="Enter your email" class="input input-bordered w-full" />
-            <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]">Next</button>
+            <!-- <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]">Next</button> -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
             <div class="flex justify-between ">
               <p class="underline underline-offset-1">Terms and Conditions</p>
               <p class="underline underline-offset-1">Cancellation Policy</p>

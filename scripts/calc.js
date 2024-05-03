@@ -85,5 +85,9 @@ for (let btn of allSeatBtn) {
     //   // const updatedGrandPrice = updatedGrandPrice
     // }
     // setInnerText("grand-total", updatedGrandPrice);
+
+    
+    event.target.setAttribute("disabled", false);
+    event.target.style.backgroundColor = ("#1DD100") ;
   });
 }
