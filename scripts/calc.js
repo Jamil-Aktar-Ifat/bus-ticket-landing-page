@@ -53,6 +53,9 @@ for (let btn of allSeatBtn) {
     li.appendChild(p2);
     li.appendChild(p3);
     selectedSeatContainer.appendChild(li);
+
+    const totalCost = parseInt(document.getElementById("total-cost").innerText);
+    document.getElementById("total-cost").innerText = totalCost + seatPrice;
     // seat numbers
     // console.log(
     //   event.target.parentNode.parentNode.parentNode.parentNode.parentNode
