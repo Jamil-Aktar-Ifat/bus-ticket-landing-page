@@ -38,6 +38,7 @@ for (let btn of allSeatBtn) {
       "selected-seat-container"
     );
 
+    // updating the list of the seat and price
     const li = document.createElement("li");
 
     const p = document.createElement("p");
@@ -54,12 +55,35 @@ for (let btn of allSeatBtn) {
     li.appendChild(p3);
     selectedSeatContainer.appendChild(li);
 
-    const totalCost = parseInt(document.getElementById("total-cost").innerText);
-    document.getElementById("total-cost").innerText = totalCost + seatPrice;
-    // seat numbers
-    // console.log(
-    //   event.target.parentNode.parentNode.parentNode.parentNode.parentNode
-    //     .childNodes[11].childNodes[7].childNodes[5]
+    // total price part
+    // const totalPrice = parseInt(
+    //   document.getElementById("total-price").innerText
     // );
+    // const updatedTotalPrice = totalPrice + seatPrice;
+    // setInnerText("total-price", updatedTotalPrice);
+
+    totalCost("total-price", seatPrice);
+
+    // grand price part
+    // const grandPrice = parseInt(
+    //   document.getElementById("grand-total").innerText
+    // );
+    // const updatedGrandPrice = grandPrice + seatPrice;
+
+    totalCost("grand-total", seatPrice);
+
+    // // coupon
+    // const coupon1 = "NEW15";
+    // const coupon2 = "Couple20";
+
+    // // coupon field
+
+    // console.log(inputField);
+    // if (inputField === coupon1) {
+    //   const updatedGrandPrice = updatedGrandPrice - updatedGrandPrice * 0.15;
+    // } else {
+    //   // const updatedGrandPrice = updatedGrandPrice
+    // }
+    // setInnerText("grand-total", updatedGrandPrice);
   });
 }
