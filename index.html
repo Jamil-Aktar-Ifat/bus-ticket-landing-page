@@ -87,11 +87,11 @@
       <!-- End to End Travel section  -->
       <section  class="my-12">
         <div class="hero rounded-3xl" style="background-image: url('./images/banner.png');">
-         <div class="hero-content items-center text-center text-neutral-content">
+         <div  class="hero-content items-center text-center text-neutral-content">
           <div class="max-w-md flex-col my-28">
             <h1 class="mb-5 text-5xl font-bold">City-to-City Travel with  <br><span class="text-5xl font-bold text-[#1DD100]">National Express</span></h1>
             <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-            <button class="btn bg-[#1dd100] border-none text-lg font-bold">Buy Tickets</button>
+            <button onclick="buyTicket()" id="buy-ticket" class="btn bg-[#1dd100] border-none text-lg font-bold">Buy Tickets</button>
           </div>
          </div>
        </div>
@@ -187,7 +187,7 @@
                  </div>
               </div>
               <div class="rounded-lg">
-                    <button class="btn bg-[#1DD10026] text-[#1DD100] font-inter"><img src="./images/seat-green.png" alt=""> 40 Seats Left</button>
+                    <button class="btn bg-[#1DD10026] text-[#1DD100] font-inter"><img src="./images/seat-green.png" alt=""> <span id="seats-left">40</span> Seats Left</button>
               </div>              
              </div>
             </div>
@@ -235,7 +235,7 @@
               <!-- <img src="./images/fare.png" alt=""> -->
             </div>
             <div class="text-center">
-              <p class="font-bold text-3xl">550 Pounds</p>
+              <p class="font-bold text-3xl font-inter">550 Pounds</p>
               <p class="text-xl">Per Seat</p>
             </div>
           </div>
@@ -253,10 +253,10 @@
             <p>Available</p>
             <div class="flex gap-2">
               <img src="./images/seat-green-filled.png" alt="">
-              <p class="primary-color">Selected</p>
+              <p class="primary-color"><span id="selected-seats" class="font-inter font-medium"></span> Selected</p>
             </div>
           </div>
-          <div class="flex flex-col w-full border-opacity-50">
+          <div class="flex flex-col w-full border-opacity-50">.
             <div class="dotted-divider"></div>
           </div>
 
@@ -381,15 +381,15 @@
             </div>
             <div>
               <div class="flex justify-between">
+                <ul id="selected-seat-container" class="selected-seat-container">
+
+                </ul>
+              </div>
+              <!-- <div class="flex justify-between">
                 <p>C2</p>
                 <p>Economy</p>
                 <p>550</p>
-              </div>
-              <div class="flex justify-between">
-                <p>C2</p>
-                <p>Economy</p>
-                <p>550</p>
-              </div>
+              </div> -->
             </div>
             <div class="flex flex-col w-full border-opacity-50">
              <div class="dotted-divider"></div>
@@ -425,7 +425,7 @@
       </section>
     </main>
     <!-- footer section  -->
-      <footer class="footer p-20 bg-black text-white text-base-content">
+    <footer class="footer p-20 bg-black text-white text-base-content">
       <div class="w-full flex justify-between">
         <div>
           <h1 class="font-bold text-2xl my-2">National Express Service</h1>
@@ -443,5 +443,8 @@
         </div>
       </div>
     </footer>
- </body>
+    <!-- Scripts  -->
+    <script src="./scripts/calc.js"></script>
+    <script src="./scripts/utility.js"></script>
+  </body>
 </html>

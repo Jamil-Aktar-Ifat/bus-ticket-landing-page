@@ -20,3 +20,8 @@
   margin: 20px 0;
 }
 
+li{
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
