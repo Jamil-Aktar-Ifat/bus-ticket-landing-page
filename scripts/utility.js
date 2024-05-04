@@ -16,7 +16,7 @@ function grandTotalCost(category) {
 
   if (category == "NEW15") {
     setInnerText("grand-total", totalCost - totalCost * 0.15);
-  } else if (category == "Couple20") {
+  } else if (category == "Couple 20") {
     setInnerText("grand-total", totalCost - totalCost * 0.20);
   } else {
     setInnerText("grand-total", totalCost);

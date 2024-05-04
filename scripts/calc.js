@@ -89,5 +89,8 @@ for (let btn of allSeatBtn) {
     
     event.target.setAttribute("disabled", false);
     event.target.style.backgroundColor = ("#1DD100") ;
+
+
+    
   });
 }
