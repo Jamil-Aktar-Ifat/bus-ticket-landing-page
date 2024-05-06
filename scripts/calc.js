@@ -70,27 +70,15 @@ for (let btn of allSeatBtn) {
     // );
     // const updatedGrandPrice = grandPrice + seatPrice;
 
+    // seatSelectionRestriction();
+    seatSelectionRestriction();
+
+
     totalCost("grand-total", seatPrice);
 
-    // // coupon
-    // const coupon1 = "NEW15";
-    // const coupon2 = "Couple20";
-
-    // // coupon field
-
-    // console.log(inputField);
-    // if (inputField === coupon1) {
-    //   const updatedGrandPrice = updatedGrandPrice - updatedGrandPrice * 0.15;
-    // } else {
-    //   // const updatedGrandPrice = updatedGrandPrice
-    // }
-    // setInnerText("grand-total", updatedGrandPrice);
-
-    
     event.target.setAttribute("disabled", false);
-    event.target.style.backgroundColor = ("#1DD100") ;
+    event.target.style.backgroundColor = "#1DD100";
 
-
-    
+    // restriction in selecting the seats
   });
 }
