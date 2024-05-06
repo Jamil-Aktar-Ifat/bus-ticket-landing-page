@@ -11,6 +11,17 @@
 //   console.log("Button Pressed!");
 // }
 
+// scroll part
+const scrollButton = document.getElementById("buy-ticket");
+console.log(scrollButton);
+
+const mainSection = document.getElementById("main-section");
+console.log(mainSection);
+
+scrollButton.addEventListener("click", function () {
+  mainSection.scrollIntoView({ behavior: "smooth" });
+});
+
 const allSeatBtn = document.getElementsByClassName("w-24");
 // console.log(allSeatBtn);
 let seatsLeft = 39;
@@ -72,7 +83,6 @@ for (let btn of allSeatBtn) {
 
     // seatSelectionRestriction();
     seatSelectionRestriction();
-
 
     totalCost("grand-total", seatPrice);
 
