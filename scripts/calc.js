@@ -93,15 +93,17 @@ for (let btn of allSeatBtn) {
   });
 }
 
-
 const discountButton = document.getElementById("discount-apply-btn");
 discountButton.disabled = true;
 
-const nextBtnDisable = document.getElementById("next-button");
-nextBtnDisable.disabled = true;
 
-// hide and show section
-function nextButton() {
-  hideElementById("hide-id");
-  showElementById("show-id");
-}
+// function nextButton() {
+//   let inputNum = document.getElementById("input-phone-num").value.length;
+//   console.log(inputNum);
+//   if (inputNum > 0) {
+//     hideElementById("hide-id");
+//     showElementById("show-id");
+//   } else {
+//     console.log("do nothing");
+//   }
+// }

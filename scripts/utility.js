@@ -67,12 +67,16 @@ function seatSelectionRestriction() {
 //   const grandPrice = parseInt(document.getElementById(elementId2).innerText);
 //   console.log(grandPrice);
 //   let discountedAmount = totalPrice - grandPrice;
-// }
 
-if (totalPrice == 2200) {
-  const discountButton = document.getElementById("discount-apply-btn");
-  discountButton.disabled = false;
-} else {
-  const discountButton = document.getElementById("discount-apply-btn");
-  // discountButton.disabled = true;
+function nextButton() {
+  let inputNum = document.getElementById("input-phone-num").value.length;
+  const totalPrice = parseInt(document.getElementById("total-price").innerText);
+  // console.log(inputNum);
+  // console.log(totalPrice);
+  if (inputNum > 0 && totalPrice > 0) {
+    hideElementById("hide-id");
+    showElementById("show-id");
+  } else {
+    console.log("do nothing");
+  }
 }
