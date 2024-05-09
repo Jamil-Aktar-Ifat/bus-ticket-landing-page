@@ -59,7 +59,7 @@ function seatSelectionRestriction() {
       allSeatBtn[i].disabled = true;
       if (i == 0) {
         alert(
-          "To prevent Black Market, We restrict our customer to select highest 4 seats at one time. Thanks for your cooperation!"
+          "To maintain integrity and prevent misuse, please limit seat selections to four at a time. Thank you for your cooperation!"
         );
       }
       const discountButton = document.getElementById("discount-apply-btn");
@@ -70,18 +70,15 @@ function seatSelectionRestriction() {
   }
 }
 
-
 function nextButton() {
   let inputNum = document.getElementById("input-phone-num").value.length;
   const totalPrice = parseInt(document.getElementById("total-price").innerText);
   // console.log(inputNum);
   // console.log(totalPrice);
-  if (inputNum == 11 && totalPrice > 0) {
+  if (inputNum > 0 && totalPrice > 0) {
     hideElementById("hide-id");
     showElementById("show-id");
   } else {
-    alert(
-      "Please select at least 1 seat and input your 11 digit phone number!"
-    );
+    alert("Please choose at least one seat and provide your phone number!");
   }
 }
