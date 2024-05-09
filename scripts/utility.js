@@ -46,6 +46,8 @@ function grandTotalCost(category) {
     hideElementById("coupon-field");
     showElementById("discounted-amount");
   } else {
+    alert("Your coupon is not valid. Good Luck for Next Time!");
+    hideElementById("coupon-field");
     setInnerText("grand-total", totalCost);
   }
 }
@@ -55,6 +57,11 @@ function seatSelectionRestriction() {
   for (let i = 0; i < allSeatBtn.length; i++) {
     if (totalPrice >= 2200) {
       allSeatBtn[i].disabled = true;
+      if (i == 0) {
+        alert(
+          "To prevent Black Market, We restrict our customer to select highest 4 seats at one time. Thanks for your cooperation!"
+        );
+      }
       const discountButton = document.getElementById("discount-apply-btn");
       discountButton.disabled = false;
     } else {
@@ -63,23 +70,18 @@ function seatSelectionRestriction() {
   }
 }
 
-// function dicountedAmount(elementId1, elementId2) {
-//   const totalPrice = parseInt(document.getElementById(elementId1).innerText);
-//   console.log(totalPrice);
-//   const grandPrice = parseInt(document.getElementById(elementId2).innerText);
-//   console.log(grandPrice);
-//   let discountedAmount = totalPrice - grandPrice;
 
 function nextButton() {
   let inputNum = document.getElementById("input-phone-num").value.length;
   const totalPrice = parseInt(document.getElementById("total-price").innerText);
   // console.log(inputNum);
   // console.log(totalPrice);
-  if (inputNum > 0 && totalPrice > 0) {
+  if (inputNum == 11 && totalPrice > 0) {
     hideElementById("hide-id");
     showElementById("show-id");
   } else {
-    console.log("do nothing");
+    alert(
+      "Please select at least 1 seat and input your 11 digit phone number!"
+    );
   }
 }
-
