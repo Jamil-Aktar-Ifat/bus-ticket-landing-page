@@ -3,6 +3,17 @@ function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
 }
 
+// hide and seek
+function hideElementById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.add("hidden");
+}
+
+function showElementById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("hidden");
+}
+
 function totalCost(id, value) {
   const totalCost = parseInt(document.getElementById(id).innerText);
   const updatedTotalCost = totalCost + value;
@@ -24,12 +35,14 @@ function grandTotalCost(category) {
       "discounted-amount-container",
       totalCost - (totalCost - totalCost * 0.15)
     );
+    showElementById("discounted-amount");
   } else if (category == "Couple 20") {
     setInnerText("grand-total", totalCost - totalCost * 0.2);
     setInnerText(
       "discounted-amount-container",
-      totalCost - (totalCost - totalCost * 0.15)
+      totalCost - (totalCost - totalCost * 0.2)
     );
+    showElementById("discounted-amount");
   } else {
     setInnerText("grand-total", totalCost);
   }
@@ -37,11 +50,11 @@ function grandTotalCost(category) {
 
 function seatSelectionRestriction() {
   const totalPrice = parseInt(document.getElementById("total-price").innerText);
-  // console.log(totalPrice);
-
   for (let i = 0; i < allSeatBtn.length; i++) {
     if (totalPrice >= 2200) {
       allSeatBtn[i].disabled = true;
+      const discountButton = document.getElementById("discount-apply-btn");
+      discountButton.disabled = false;
     } else {
       allSeatBtn[i].disabled = false;
     }
@@ -56,12 +69,10 @@ function seatSelectionRestriction() {
 //   let discountedAmount = totalPrice - grandPrice;
 // }
 
-function hideElementById(elementId) {
-  const element = document.getElementById(elementId);
-  element.classList.add("hidden");
-}
-
-function showElementById(elementId) {
-  const element = document.getElementById(elementId);
-  element.classList.remove("hidden");
+if (totalPrice == 2200) {
+  const discountButton = document.getElementById("discount-apply-btn");
+  discountButton.disabled = false;
+} else {
+  const discountButton = document.getElementById("discount-apply-btn");
+  // discountButton.disabled = true;
 }

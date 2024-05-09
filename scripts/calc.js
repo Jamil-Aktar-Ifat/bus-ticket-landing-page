@@ -87,10 +87,18 @@ for (let btn of allSeatBtn) {
 
     event.target.setAttribute("disabled", true);
     event.target.style.backgroundColor = "#1DD100";
+    event.target.style.color = "#FFFFFF";
 
     event.target.removeEventListener("click", updateSeatSelection);
   });
 }
+
+
+const discountButton = document.getElementById("discount-apply-btn");
+discountButton.disabled = true;
+
+const nextBtnDisable = document.getElementById("next-button");
+nextBtnDisable.disabled = true;
 
 // hide and show section
 function nextButton() {

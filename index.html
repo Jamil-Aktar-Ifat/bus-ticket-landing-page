@@ -425,11 +425,11 @@
               <!-- coupon imput section  -->
               <label class="input flex justify-center items-center p-8 my-4">
               <input id="input-field" type="text" class="grow" placeholder="Have any coupon?" />
-              <button onclick="grandTotalCost(inputField.value)" class="btn bg-[#1DD100] text-white">Apply</button>
+              <button onclick="grandTotalCost(inputField.value)" id="discount-apply-btn" class="btn bg-[#1DD100] text-white">Apply</button>
             </label>
             <!-- showing discounted Amount  -->
-            <div
-             class="flex justify-between">
+            <div id="discounted-amount"
+             class="flex justify-between hidden">
               <p>Discounted Amount</p>
               <p>£<span id="discounted-amount-container">0</span></p>
             </div>
@@ -440,15 +440,15 @@
             </div>
           </div>
           <div class="mt-5">
-            <p class="font-medium mb-2">Passenger Name*</p>
+            <p class="font-bold mb-2">Passenger Name*</p>
             <input type="text" placeholder="Enter your name" class="input input-bordered w-full " />
-            <p class="font-medium my-2">Phone Number*</p>
-            <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
-            <p class="font-medium my-2">Email*</p>
-            <input type="text" placeholder="Enter your email" class="input input-bordered w-full" />
+            <p class="font-bold my-2">Phone Number*</p>
+            <input type="number" placeholder="Enter your phone number" class="input font-inter input-bordered w-full" />
+            <p class="font-bold my-2">Email*</p>
+            <input type="email" placeholder="Enter your email" class="input input-bordered w-full" />
             <!-- <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]">Next</button> -->
             <!-- Open the modal using ID.showModal() method -->
-            <button onclick="nextButton()" class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
+            <button onclick="nextButton()" id="next-button" class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
             <div class="flex justify-between ">
               <p class="underline underline-offset-1">Terms and Conditions</p>
               <p class="underline underline-offset-1">Cancellation Policy</p>
