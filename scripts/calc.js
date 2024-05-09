@@ -13,10 +13,10 @@
 
 // scroll part
 const scrollButton = document.getElementById("buy-ticket");
-console.log(scrollButton);
+// console.log(scrollButton);
 
 const mainSection = document.getElementById("main-section");
-console.log(mainSection);
+// console.log(mainSection);
 
 scrollButton.addEventListener("click", function () {
   mainSection.scrollIntoView({ behavior: "smooth" });
@@ -28,8 +28,7 @@ let seatsLeft = 39;
 let selectedSeats = 1;
 
 for (let btn of allSeatBtn) {
-  btn.addEventListener("click", function (event) {
-    console.log("Seat Selected!");
+  btn.addEventListener("click", function updateSeatSelection(event) {
     updatedSeatsLeft = seatsLeft--;
     updatedSelectedSeats = selectedSeats++;
     setInnerText("seats-left", updatedSeatsLeft);
@@ -86,9 +85,15 @@ for (let btn of allSeatBtn) {
 
     totalCost("grand-total", seatPrice);
 
-    event.target.setAttribute("disabled", false);
+    event.target.setAttribute("disabled", true);
     event.target.style.backgroundColor = "#1DD100";
 
-    // restriction in selecting the seats
+    event.target.removeEventListener("click", updateSeatSelection);
   });
+}
+
+// hide and show section
+function nextButton() {
+  hideElementById("hide-id");
+  showElementById("show-id");
 }

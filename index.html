@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="font-raleway mx-auto">
-    <header class=" container mx-auto mt-10">
+    <section id="hide-id" class="">
+      <header  class=" container mx-auto mt-10">
       <!-- nav section  -->
       <section>
         <div class="navbar bg-base-100">
@@ -59,7 +60,7 @@
             </div>
             <a class="btn btn-ghost text-4xl">National Express</a>
           </div>
-          <div class="navbar-center hidden lg:flex">
+          <div class="navbar-center lg:flex">
             <ul class="menu menu-horizontal px-1 text-[18px]"> 
               <li><a>Home</a></li>
               <li><a>About</a></li>
@@ -83,15 +84,15 @@
         </div>
       </section>
     </header>
-    <main class=" container mx-auto">
+    <main class="container mx-auto">
       <!-- End to End Travel section  -->
-      <section  class="my-12">
+      <section id="hide-id" class="my-12">
         <div class="hero rounded-3xl" style="background-image: url('./images/banner.png');">
          <div  class="hero-content items-center text-center text-neutral-content">
           <div class="max-w-md flex-col my-28">
             <h1 class="mb-5 text-5xl font-bold">City-to-City Travel with  <br><span class="text-5xl font-bold text-[#1DD100]">National Express</span></h1>
             <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-            <button onclick="buyTicket()" id="buy-ticket" class="btn bg-[#1dd100] border-none text-lg font-bold">Buy Tickets</button>
+            <button id="buy-ticket" class="btn bg-[#1dd100] border-none text-lg font-bold">Buy Tickets</button>
           </div>
          </div>
        </div>
@@ -127,7 +128,7 @@
         </div>
       </section>
       <!-- Best offer for you section  -->
-      <section class="mb-8">
+      <section id="hide-id"  class="mb-8">
         <div>
           <h1 class="text-3xl font-raleway font-bold text-center mb-12">Best offers for you</h1>
         </div>
@@ -166,7 +167,7 @@
         </div>
       </section>
       <!-- National Express Section  -->
-      <section id="main-section" class="border-2 rounded-xl mb-16 bg-[#F7F8F8]">
+      <section  id="main-section" class="border-2 rounded-xl mb-16 bg-[#F7F8F8]">
         <!-- Main Container  -->
         <div>
           <!-- text section  -->
@@ -244,7 +245,7 @@
         <!-- Select Seat Section   -->
        <div class="bg-white rounded-xl mt-5 mx-20 p-7 flex">
          <!-- Part - 1 -->
-        <div class="">
+        <div class="ml-24">
           <h1 class="text-2xl font-medium">Select Your Seat</h1>
           <div class="flex flex-col w-full border-opacity-50">
             <div class="dotted-divider"></div>
@@ -382,27 +383,27 @@
 
         </div>
         <!-- divider -->
-        <div class="flex flex-col w-full lg:flex-row ml-12">
+        <div class="flex lg:flex-row ">
           <div class="divider lg:divider-horizontal"></div> 
         </div>
         <!-- Part - 2 -->
-        <div class="mr-10">
-          <h1 class="text-2xl font-medium">Select Your Seat</h1>
+        <div class="mr-10 w-80">
+          <h1 class="text-2xl font-medium">Confirm Your Seat</h1>
           <div class="flex flex-col w-full border-opacity-50">
             <div class="dotted-divider"></div>
           </div>
           <!-- selected seat part  -->
           <div class="font-inter bg-[#F7F8F8] rounded-xl p-5">
             <div class="flex justify-between">
-              <p>Seat <span id="selected-seats" class="font-inter font-medium border-2 px-3 rounded-lg bg-green-500 text-white">0</span></p>
-              <p>Class</p>
+              <p class="">Seat <span id="selected-seats" class="font-inter font-medium  px-3 rounded-lg bg-green-500 text-white">0</span></p>
+              <p class="pr-12">Class</p>
               <p>Price</p>
             </div>
             <div class="flex flex-col w-full border-opacity-50">
             <div class="dotted-divider"></div>
             </div>
             <div>
-              <div class="flex justify-between created-li">
+              <div class="flex justify-center created-li">
                 <ul id="selected-seat-container" class="selected-seat-container">
 
                 </ul>
@@ -420,10 +421,19 @@
               <h1 class="font-medium">Total Price</h1>
               <p ><span>£</span><span id="total-price">0</span></p>
             </div>
-            <label class="input flex items-center gap-2 p-8 my-4">
+            <section class="">
+              <!-- coupon imput section  -->
+              <label class="input flex justify-center items-center p-8 my-4">
               <input id="input-field" type="text" class="grow" placeholder="Have any coupon?" />
               <button onclick="grandTotalCost(inputField.value)" class="btn bg-[#1DD100] text-white">Apply</button>
             </label>
+            <!-- showing discounted Amount  -->
+            <div
+             class="flex justify-between">
+              <p>Discounted Amount</p>
+              <p>£<span id="discounted-amount-container">0</span></p>
+            </div>
+            </section>
             <div class="flex justify-between my-5">
               <p class="font-medium">Grand Total</p>
               <p  class="font-medium">GBP <span id="grand-total">0</span></p>
@@ -438,19 +448,7 @@
             <input type="text" placeholder="Enter your email" class="input input-bordered w-full" />
             <!-- <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]">Next</button> -->
             <!-- Open the modal using ID.showModal() method -->
-            <button class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
-            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-                <h3 class="font-bold text-lg">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
-                <div class="modal-action">
-                  <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
-                  </form>
-                </div>
-              </div>
-            </dialog>
+            <button onclick="nextButton()" class="btn btn-block my-5 font-semibold text-white bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
             <div class="flex justify-between ">
               <p class="underline underline-offset-1">Terms and Conditions</p>
               <p class="underline underline-offset-1">Cancellation Policy</p>
@@ -459,6 +457,7 @@
         </div>
        </div>
       </section>
+      
     </main>
     <!-- footer section  -->
     <footer class="footer p-20 bg-black text-white text-base-content">
@@ -479,6 +478,29 @@
         </div>
       </div>
     </footer>
+    </section>
+    <!-- sucess section  -->
+      <section id="show-id" class=" hidden text-center justify-center items-center border-8 border-lime-300">
+        <div class="flex justify-center items-center">
+          <img src="./images/success.png" alt="">
+        </div>
+        <div>
+          <h2>Success</h2>
+        </div>
+        <div>
+          <p>Thank you for Booking Our Bus Seats. 
+          We are working hard to find the best service and deals for you.
+          </p>
+        </div>
+        <div>
+          <p>
+           Shortly you will find a confirmation in your email.
+          </p>
+        </div>
+        <div>
+          <button>Continue</button>
+        </div>
+      </section>
     <!-- Scripts  -->
     <script src="./scripts/calc.js"></script>
     <script src="./scripts/utility.js"></script>
