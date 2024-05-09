@@ -35,6 +35,7 @@ function grandTotalCost(category) {
       "discounted-amount-container",
       totalCost - (totalCost - totalCost * 0.15)
     );
+    hideElementById("coupon-field");
     showElementById("discounted-amount");
   } else if (category == "Couple 20") {
     setInnerText("grand-total", totalCost - totalCost * 0.2);
@@ -42,6 +43,7 @@ function grandTotalCost(category) {
       "discounted-amount-container",
       totalCost - (totalCost - totalCost * 0.2)
     );
+    hideElementById("coupon-field");
     showElementById("discounted-amount");
   } else {
     setInnerText("grand-total", totalCost);

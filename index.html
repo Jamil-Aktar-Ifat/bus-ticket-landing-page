@@ -245,7 +245,7 @@
         <!-- Select Seat Section   -->
        <div class="bg-white rounded-xl mt-5 mx-20 p-7 flex">
          <!-- Part - 1 -->
-        <div class="ml-24">
+        <div class="ml-12">
           <h1 class="text-2xl font-medium">Select Your Seat</h1>
           <div class="flex flex-col w-full border-opacity-50">
             <div class="dotted-divider"></div>
@@ -383,7 +383,7 @@
 
         </div>
         <!-- divider -->
-        <div class="flex lg:flex-row ">
+        <div class="flex lg:flex-row mx-10">
           <div class="divider lg:divider-horizontal"></div> 
         </div>
         <!-- Part - 2 -->
@@ -417,26 +417,26 @@
             <div class="flex flex-col w-full border-opacity-50">
              <div class="dotted-divider"></div>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between mb-2">
               <h1 class="font-medium">Total Price</h1>
               <p ><span>£</span><span id="total-price">0</span></p>
             </div>
-            <section class="">
+            <section  class="">
               <!-- coupon imput section  -->
-              <label class="input flex justify-center items-center p-8 my-4">
+              <label id="coupon-field" class="input flex justify-center items-center p-8 my-4">
               <input id="input-field" type="text" class="grow" placeholder="Have any coupon?" />
               <button onclick="grandTotalCost(inputField.value)" id="discount-apply-btn" class="btn bg-[#1DD100] text-white">Apply</button>
             </label>
             <!-- showing discounted Amount  -->
             <div id="discounted-amount"
-             class="flex justify-between hidden">
+             class="flex justify-between hidden mb-2">
               <p>Discounted Amount</p>
-              <p>£<span id="discounted-amount-container">0</span></p>
+              <p>-£<span id="discounted-amount-container">0</span></p>
             </div>
             </section>
-            <div class="flex justify-between my-5">
-              <p class="font-medium">Grand Total</p>
-              <p  class="font-medium">GBP <span id="grand-total">0</span></p>
+            <div class="flex justify-between mx-0 my-0">
+              <p class="font-bold">Grand Total</p>
+              <p  class="font-bold">GBP <span id="grand-total">0</span></p>
             </div>
           </div>
           <div class="mt-5">
