@@ -38,11 +38,7 @@ for (let btn of allSeatBtn) {
     const seatName = event.target.innerText;
 
     // seat price
-    const seatPrice = parseInt(
-      event.target.parentNode.parentNode.parentNode.parentNode.parentNode
-        .parentNode.childNodes[3].childNodes[7].childNodes[5].childNodes[3]
-        .childNodes[1].innerText
-    );
+    const seatPrice = 550;
 
     const selectedSeatContainer = document.getElementById(
       "selected-seat-container"
@@ -95,7 +91,6 @@ for (let btn of allSeatBtn) {
 
 const discountButton = document.getElementById("discount-apply-btn");
 discountButton.disabled = true;
-
 
 // function nextButton() {
 //   let inputNum = document.getElementById("input-phone-num").value.length;
